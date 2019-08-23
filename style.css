@@ -1,24 +1,81 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    background: rgba(207, 207, 211, 0.38);
+    background-image: url("image/ep_naturalwhite.png");
 }
 p {
     text-indent: 30px;
 }
+header {
+    margin: 0 auto;
+    width: 1350px;
+}
+section {
+    margin: 0 auto;
+    width: 1350px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+footer {
+    margin: 0 auto;
+    width: 1350px;
+    height: 125px;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(128, 0, 128, 1) 0%, rgba(0, 0, 0, 1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(128, 0, 128, 1)), color-stop(100%, rgba(0, 0, 0, 1))); /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(128, 0, 128, 1) 0%, rgba(0, 0, 0, 1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(128, 0, 128, 1) 0%, rgba(0, 0, 0, 1) 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(128, 0, 128, 1) 0%, rgba(0, 0, 0, 1) 100%); /* ie10+ */
+    background: radial-gradient(ellipse at center, rgba(128, 0, 128, 1) 0%, rgba(0, 0, 0, 1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#800080', endColorstr='#000000', GradientType=1); /* ie6-9 */
+}
+a:hover {
+    color: #ff7c00;
+}
 .header_one {
     background: url("image/Header/Header1.jpg");
+    background-size: cover;
     width: 1350px;
-    height: 200px;
+    height: 250px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }
 .header_text {
+    margin-top: 25px;
     float: left;
     font-family: Arial, sans-serif;
     font-size: 18px;
     font-style: italic;
     color: white;
     padding: 15px 0 0 25px;
+}
+.header_image {
+    position: relative;
+}
+.earth1 {
+    width: 150px;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+.moon2 {
+    width: 64px;
+    position: absolute;
+    top: 85px;
+    left: 85px;
+    animation: linear 10s orbita infinite;
+    z-index: 0;
+}
+@keyframes orbita {
+    0%{width: 36px;}
+    24%{z-index: 0;}
+    25%{left: 180px; top: 65px; z-index: 2;}
+    50%{width: 64px;}
+    74%{z-index: 2;}
+    75%{top: 150px; left: 15px; z-index: 0;}
+    100%{width: 36px; transform: rotate(360deg);}
 }
 .carousel-container {
     display: block;
@@ -76,6 +133,7 @@ p {
     transform: rotate(180deg);
 }
 .btn:hover {
+    cursor: pointer;
     opacity: 0.5;
     width: 120px;
     height: 120px;
@@ -208,7 +266,7 @@ p {
 }
 .Superman_text12 {
     display: block;
-    padding-top: 13px;
+    padding-top: 5px;
 }
 .Superman_text2 {
     text-decoration: none;
@@ -219,14 +277,15 @@ p {
     color: #000;
 }
 .Superman_text2:hover {
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
     font-weight: 700;
     color: #0f0847;
 }
 .solarsystem {
-    margin-top: 200px;
+    padding-top: 250px;
+    margin: 0 auto;
 }
 .solarsystem__solar1 {
     text-align: center;
@@ -279,10 +338,11 @@ p {
     cursor: pointer;
 }
 .solar-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .modal{
     display: none;
@@ -293,25 +353,33 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255, 161, 30, 0.4);
 }
 .modal-content{
-    background-color: #f3ffe3;
+    position: center;
+    background-color: #fff4af;
     margin: 15% auto;
     padding: 10px;
-    border: 2px solid #888;
-    width: 80%;
+    border: 5px solid #ff7c00;
+    border-radius: 10px;
+    width: 1085px;
 }
 .close {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 .close:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #ff7c00;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 .modal1 {
@@ -323,26 +391,32 @@ p {
      width: 100%;
      height: 100%;
      overflow: auto;
-     background-color: rgba(0,0,0,0.5);
+     background-color: rgba(211, 133, 90, 0.4);
  }
 .modal-content1 {
-    background-color: #f3ffe3;
+    background-color: #d3baa0;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border: 5px solid #d3855a;
+    border-radius: 10px;
+    width: 1085px;
 }
 .close1 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 .close1:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #d3855a;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Mercury {
@@ -354,10 +428,11 @@ p {
     color: #f3ffe3;
 }
 .Mercury-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 #Mercury:hover {
     cursor: pointer;
@@ -371,18 +446,21 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(202,153,69,0.4);
 }
 .modal-content2 {
-    background-color: #f3ffe3;
+    background-color: #cab97d;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border: 5px solid #ca9945;
+    border-radius: 10px;
+    width: 1085px;
 }
 .close2 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -396,24 +474,24 @@ p {
     color: #f3ffe3;
 }
 .Venus-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close2:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #ca9945;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Venus:hover {
     cursor: pointer;
 }
-
-
-
-
 .modal3 {
     display: none;
     position: fixed;
@@ -423,18 +501,21 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 105, 229, 0.4);
 }
 .modal-content3 {
-    background-color: #f3ffe3;
+    background-color: #83e3e5;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    border: 5px solid #0148e5;
+    width: 1085px;
 }
 .close3 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -448,15 +529,19 @@ p {
     color: #f3ffe3;
 }
 .Earth-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close3:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #0148e5;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Earth:hover {
@@ -471,18 +556,21 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255,121,57,0.4);
 }
 .modal-content4 {
-    background-color: #f3ffe3;
+    background-color: #ffbd87;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    border: 5px solid #ff7939;
+    width: 1085px;
 }
 .close4 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -496,15 +584,19 @@ p {
     color: #f3ffe3;
 }
 .Mars-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close4:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #ff7939;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Mars:hover {
@@ -519,18 +611,21 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(176,119,62,0.4);
 }
 .modal-content5 {
-    background-color: #f3ffe3;
+    background-color: #bab092;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    border: 5px solid #b0773e;
+    width: 1085px;
 }
 .close5 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -544,15 +639,19 @@ p {
     color: #f3ffe3;
 }
 .Jupiter-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close5:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #b0773e;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Jupiter:hover {
@@ -567,18 +666,21 @@ p {
      width: 100%;
      height: 100%;
      overflow: auto;
-     background-color: rgba(0,0,0,0.5);
+     background-color: rgba(224,184,37,0.4);
  }
 .modal-content6 {
-    background-color: #f3ffe3;
+    background-color: #ede6a7;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    border: 5px solid #e0b825;
+    width: 1085px;
 }
 .close6 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -592,15 +694,19 @@ p {
     color: #f3ffe3;
 }
 .Saturn-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close6:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #e0b825;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Saturn:hover {
@@ -615,18 +721,21 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(58,112,111,0.4);
 }
 .modal-content7 {
-    background-color: #f3ffe3;
+    background-color: #4ac6d9;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    border: 5px solid #3a706f;
+    width: 1085px;
 }
 .close7 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -635,20 +744,24 @@ p {
     width: 150px;
     height: 50px;
     border-radius: 10px;
-    background-color: #60d2d6;
+    background-color: #3a706f;
     font-size: 20px;
     color: #f3ffe3;
 }
 .Uranus-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close7:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
-    background-color: #60d2d6;
-    opacity: 0.5;
+    background-color: #3a706f;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Uranus:hover {
@@ -663,18 +776,21 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(85,136,226,0.4);
 }
 .modal-content8 {
-    background-color: #f3ffe3;
+    background-color: #bbe5fe;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    border: 5px solid #5588e2;
+    width: 1085px;
 }
 .close8 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -688,15 +804,19 @@ p {
     color: #f3ffe3;
 }
 .Neptune-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close8:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #5588e2;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 50%;
 }
 #Neptune:hover {
@@ -711,18 +831,21 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(141,98,56,0.4);
 }
 .modal-content9 {
-    background-color: #f3ffe3;
+    background-color: #edcfb0;
     margin: 15% auto;
     padding: 10px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    border: 5px solid #8d6238;
+    width: 1085px;
 }
 .close9 {
-    color: #aaa;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -736,12 +859,15 @@ p {
     color: #f3ffe3;
 }
 .Pluto-text {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Merriweather', serif;
     font-size: 18px;
     text-align: justify;
-    width: 1035px;
+    width: 1030px;
 }
 .close9:hover {
+    text-align: center;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     background-color: #8d6238;
     opacity: 0.5;
@@ -750,4 +876,867 @@ p {
 #Pluto:hover {
     cursor: pointer;
 }
-
+.animation_2 {
+    animation: linear 20s animation_2 infinite ;
+}
+@keyframes animation_2 {
+    0% {padding-left: 0px;}
+    50% {padding-left: 1250px;}
+}
+.Satellites_1 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.Satellites_text {
+    margin-top: 10px;
+    width: 1320px;
+    padding-left: 10px;
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    text-align: justify;
+    text-indent: 30px;
+}
+.Satellites_2 {
+    overflow: auto;
+    width: 400px;
+    height: 358px;
+    background-color: black;
+    border: 2px solid #787878;
+    border-radius: 5px;
+}
+.Satellites_name_text {
+    padding-top: 5px;
+    height: 25px;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #f3ffe3;
+    text-align: center;
+    text-transform: uppercase;
+}
+.Satellites_2:hover {
+    border: 2px solid #00dee5;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 3px 15px #011aff;
+    -moz-box-shadow: 1px 3px 15px #011aff;
+    box-shadow: 1px 3px 15px #011aff;
+}
+.Satellites_2_text {
+    text-indent: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #f3ffe3;
+}
+.Astronautics_text {
+    text-indent: 30px;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+.Astronautics_text_1 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-style: italic;
+}
+.Astronautics_1 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.Astronautics_text_1_2 {
+    text-indent: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    font-style: italic;
+    overflow: auto;
+    width: 830px;
+    height: 375px;
+    border: 2px solid #787878;
+    border-radius: 5px;
+    text-align: justify;
+    transition: 1s;
+}
+#Astronautics_text_1_2_1 {
+    height: 313px;
+}
+.Astronautics_text_1_2:hover {
+    background-color: #0f0847;
+    color: #f3ffe3;
+    border: 2px solid #00dee5;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 3px 15px #011aff;
+    -moz-box-shadow: 1px 3px 15px #011aff;
+    box-shadow: 1px 3px 15px #011aff;
+}
+.dws-wrapper_5 {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ul.accordion_5 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+ul.accordion_5 li {
+    width: 150px;
+    overflow: hidden;
+    padding: 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    -webkit-box-shadow: 1px 3px 15px #2000ff;
+    -moz-box-shadow: 1px 3px 15px #2000ff;
+    box-shadow: 1px 3px 15px #2000ff;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+ul.accordion_5 img {
+    width: 506px;
+}
+ul.accordion_5 li:hover {
+    width: 506px;
+    -webkit-box-shadow: 1px 3px 15px #011aff;
+    -moz-box-shadow: 1px 3px 15px #011aff;
+    box-shadow: 1px 3px 15px #011aff;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+ul.accordion_5 li:nth-child(4){
+    width: 506px;
+}
+ul.accordion_5:hover li:nth-child(4){
+    width: 150px;
+}
+ul.accordion_5 li:nth-child(4):hover{
+    width: 506px;
+}
+.AsteroidBelt {
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    color: #0f0847;
+    display: block;
+}
+.AsteroidBelt:hover {
+    color: #470404;
+}
+.AsteroidBelt1 {
+    display: flex;
+    justify-content: space-around;
+}
+.AsteroidBelt1_1 {
+    width: 550px;
+    height: 300px;
+}
+.AsteroidBelt2 {
+    overflow: auto;
+    width: 650px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    transition: background-color 1s;
+}
+.AsteroidBelt3 {
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    text-align: justify;
+    padding: 5px 5px 5px 5px;
+}
+.AsteroidBelt2:hover {
+    background-color: #0f0847;
+    color: white;
+}
+.AsteroidBelt4 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.AsteroidBelt5 {
+    overflow: auto;
+    width: 650px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.AsteroidBelt5:hover {
+    background-color: #0f0847;
+    color: white;
+}
+.Comets {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.Comets1 {
+    overflow: auto;
+    width: 650px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.Comets1:hover {
+    background-color: #0f0847;
+    color: white;
+}
+.animation_3_1 {
+    margin: 0 auto;
+    width: 800px;
+}
+.animation_3 {
+    animation: linear 14s animation_2 infinite ;
+}
+@keyframes animation_2 {
+    0% {padding-left: 0px;}
+    50% {padding-left: 680px;}
+}
+.DwarfPlanets1 {
+    margin: 0 auto;
+    width: 800px;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+.DwarfPlanets2 {
+    width: 115px;
+    height: 115px;
+}
+.DwarfPlanets2:hover {
+    cursor: pointer;
+    width: 125px;
+    height: 125px;
+}
+.DwarfPlanets3{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: white;
+}
+.DwarfPlanets3:hover {
+    cursor: pointer;
+    color: #ff7c00;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.DwarfPlanets_text {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.DwarfPlanets_text1 {
+    background-color: black;
+    color: #f3ffe3;
+    overflow: auto;
+    width: 650px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.DwarfPlanets_text1:hover {
+    background-color: white;
+    color: black;
+}
+.DwarfPlanets_text2 {
+    background-color: black;
+    color: #f3ffe3;
+    overflow: auto;
+    width: 420px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.DwarfPlanets_text2:hover {
+    background-color: white;
+    color: black;
+}
+.KuiperBelt_1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.KuiperBelt_1_1 {
+    width: 650px;
+    height: 315px;
+}
+.KuiperBelt_1_2{
+    overflow: auto;
+    width: 650px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.KuiperBelt_1_2:hover {
+    background-color: #0f0847;
+    color: white;
+}
+.KuiperBelt_1_2_1 {
+     width: 400px;
+     height: 315px;
+ }
+.KuiperBelt_1_2_2 {
+    width: 350px;
+    height: 315px;
+}
+.KuiperBelt_1_2_5 {
+    overflow: auto;
+    width: 550px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.KuiperBelt_1_2_5:hover {
+    background-color: #0f0847;
+    color: white;
+}
+.dws-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+ul.accordion {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+ul.accordion li {
+    width: 100px;
+    overflow: hidden;
+    padding: 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    -webkit-box-shadow: 1px 3px 15px #000;
+    -moz-box-shadow: 1px 3px 15px #000;
+    box-shadow: 1px 3px 15px #000;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+ul.accordion img {
+    width: 300px;
+}
+ul.accordion li:hover {
+    width: 350px;
+    -webkit-box-shadow: 1px 3px 15px #828285;
+    -moz-box-shadow: 1px 3px 15px #828285;
+    box-shadow: 1px 3px 15px #828285;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+ul.accordion li:nth-child(4){
+    width: 350px;
+}
+ul.accordion:hover li:nth-child(4){
+    width: 100px;
+}
+ul.accordion li:nth-child(4):hover{
+    width: 350px;
+}
+.OutsidetheSolarSystem_1 {
+    margin-left: 20px;
+    width: 1300px;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.animate4_1 {
+    margin: 0 auto;
+    width: 1300px;
+}
+.animate4 {
+    animation: linear 25s animation4 infinite ;
+}
+@keyframes animation4 {
+    0% {padding-left: 0px;}
+    100% {padding-left: 1200px;}
+}
+.animate5_1 {
+    margin: 0 auto;
+    width: 1300px;
+}
+.animate5 {
+    animation: linear 15s animation5 infinite ;
+}
+@keyframes animation5 {
+    0% {padding-left: 0px;}
+    100% {padding-left: 1200px;}
+}
+.animate6_1 {
+    margin: 0 auto;
+    width: 600px;
+}
+.animate6 {
+    animation: linear 10s animation6 infinite ;
+}
+@keyframes animation6 {
+    0% {padding-left: 0px;}
+    50% {padding-left: 500px;}
+}
+.animate7_1 {
+    margin: 0 auto;
+    width: 1300px;
+}
+.animate7 {
+    animation: linear 15s animation7 infinite ;
+}
+@keyframes animation7 {
+    0% {padding-left: 0px;}
+    50% {padding-left: 1200px;}
+}
+.animate8_1 {
+    margin: 0 auto;
+    width: 1300px;
+}
+.animate8 {
+    animation: linear 20s animation8 infinite ;
+}
+@keyframes animation8 {
+    0% {padding-left: 0px;}
+    100% {padding-left: 1200px;}
+}
+.OutsidetheSolarSystem_2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.OutsidetheSolarSystem_2_1 {
+    overflow: auto;
+    width: 650px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.OutsidetheSolarSystem_2_1:hover {
+    background-color: #0f0847;
+    color: white;
+}
+.OutsidetheSolarSystem_2_1_1 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+#OutsidetheSolarSystem_2_1_1_1 {
+    text-transform: uppercase;
+    color: #ff7c00;
+}
+#OutsidetheSolarSystem_2_1_1_1:hover {
+    color: #ff1400;
+}
+.galaxies_1 {
+    text-indent: 30px;
+    margin-left: 20px;
+    width: 1300px;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.AndromedaGalaxy {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.AndromedaGalaxy_1 {
+    width: 650px;
+    height: 318px;
+}
+.AndromedaGalaxy_2 {
+    overflow: auto;
+    width: 650px;
+    height: 300px;
+    border: 5px solid #828285;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    transition: background-color 1s;
+}
+.AndromedaGalaxy_3 {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.AndromedaGalaxy_4 {
+    text-indent: 30px;
+}
+.AndromedaGalaxy_2:hover {
+    background-color: #0f0847;
+    color: white;
+}
+.dws-wrapper_1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ul.accordion_1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+ul.accordion_1 li {
+    width: 150px;
+    overflow: hidden;
+    padding: 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    -webkit-box-shadow: 1px 3px 15px #787878;
+    -moz-box-shadow: 1px 3px 15px #787878;
+    box-shadow: 1px 3px 15px #787878;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+ul.accordion_1 img {
+    width: 400px;
+}
+ul.accordion_1 li:hover {
+    width: 400px;
+    -webkit-box-shadow: 1px 3px 15px #a8001a;
+    -moz-box-shadow: 1px 3px 15px #a8001a;
+    box-shadow: 1px 3px 15px #a8001a;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+ul.accordion_1 li:nth-child(4){
+    width: 400px;
+}
+ul.accordion_1:hover li:nth-child(4){
+    width: 150px;
+}
+ul.accordion_1 li:nth-child(4):hover{
+    width: 400px;
+}
+.dws-wrapper_2 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ul.accordion_2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+ul.accordion_2 li {
+    width: 150px;
+    overflow: hidden;
+    padding: 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    -webkit-box-shadow: 1px 3px 15px #787878;
+    -moz-box-shadow: 1px 3px 15px #787878;
+    box-shadow: 1px 3px 15px #787878;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+ul.accordion_2 img {
+    width: 400px;
+}
+ul.accordion_2 li:hover {
+    width: 400px;
+    -webkit-box-shadow: 1px 3px 15px #011aff;
+    -moz-box-shadow: 1px 3px 15px #011aff;
+    box-shadow: 1px 3px 15px #011aff;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+ul.accordion_2 li:nth-child(4){
+    width: 400px;
+}
+ul.accordion_2:hover li:nth-child(4){
+    width: 150px;
+}
+ul.accordion_2 li:nth-child(4):hover{
+    width: 400px;
+}
+.Exoplanets_3 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.Exoplanets_4 {
+    border: 7px solid #bbbbbb;
+    border-radius: 10px;
+    overflow: auto;
+    width: 400px;
+    height: 200px;
+    box-shadow: 1px 5px 20px #6e6e6e;
+}
+.Exoplanets_4:hover {
+    box-shadow: 1px 3px 15px #000000;
+}
+.Exoplanets_4_1 {
+    text-align: center;
+    background-color: black;
+}
+.Exoplanets_4_1:hover {
+    cursor: pointer;
+}
+.Exoplanets_5 {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+.Exoplanets_text_1 {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.Exoplanets_text {
+    margin: 0;
+    text-indent: 30px;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    font-style: italic;
+}
+.Exoplanets_text_2 {
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    transition: background-color 1s;
+}
+.Exoplanets_text_2:hover {
+    color: #f3ffe3;
+    background: #0f0847;
+}
+.Exoplanets_text_3 {
+    width: 1330px;
+    margin-top: 15px;
+    padding-left: 10px;
+    text-indent: 30px;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.Blackhole_1 {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0f0847;
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+}
+.Blackhole {
+    width: 1330px;
+    padding-left: 10px;
+    text-indent: 30px;
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.dws-wrapper_3 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ul.accordion_3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+ul.accordion_3 li {
+    width: 150px;
+    overflow: hidden;
+    padding: 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    -webkit-box-shadow: 1px 3px 15px #787878;
+    -moz-box-shadow: 1px 3px 15px #787878;
+    box-shadow: 1px 3px 15px #787878;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+ul.accordion_3 img {
+    width: 450px;
+}
+ul.accordion_3 li:hover {
+    width: 450px;
+    -webkit-box-shadow: 1px 3px 15px #011aff;
+    -moz-box-shadow: 1px 3px 15px #011aff;
+    box-shadow: 1px 3px 15px #011aff;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+ul.accordion_3 li:nth-child(4){
+    width: 450px;
+}
+ul.accordion_3:hover li:nth-child(4){
+    width: 150px;
+}
+ul.accordion_3 li:nth-child(4):hover{
+    width: 450px;
+}
+#Blackhole_2 {
+    margin-top: 15px;
+}
+.Quasar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: #f3ffe3;
+    border-radius: 20px;
+    width: 1300px;
+}
+.Quasar_1{
+    border-radius: 20px;
+}
+.Quasar_2 {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    height: 312px;
+    overflow: auto;
+    border-radius: 20px;
+    transition: 1s;
+}
+.Quasar_2:hover {
+    border-radius: 20px;
+    background-color: #0f0847;
+}
+.dws-wrapper_4 {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ul.accordion_4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+ul.accordion_4 li {
+    width: 150px;
+    overflow: hidden;
+    padding: 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    -webkit-box-shadow: 1px 3px 15px #000000;
+    -moz-box-shadow: 1px 3px 15px #000000;
+    box-shadow: 1px 3px 15px #000000;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+ul.accordion_4 img {
+    width: 506px;
+}
+ul.accordion_4 li:hover {
+    width: 506px;
+    -webkit-box-shadow: 1px 3px 15px #011aff;
+    -moz-box-shadow: 1px 3px 15px #011aff;
+    box-shadow: 1px 3px 15px #011aff;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+ul.accordion_4 li:nth-child(4){
+    width: 506px;
+}
+ul.accordion_4:hover li:nth-child(4){
+    width: 150px;
+}
+ul.accordion_4 li:nth-child(4):hover{
+    width: 506px;
+}
